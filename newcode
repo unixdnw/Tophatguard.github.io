@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Input Text</title>
+</head>
+<body>
+    <label for="username">Enter Text:</label>
+    <input type="text" id="username" name="username">
+    <button onclick="displayText()">Display Text</button>
+    <p id="displayText"></p>
+
+    <script>
+        function displayText() {
+            // Get the input element by its id
+            var inputElement = document.getElementById("username");
+
+            // Get the text entered by the user
+            var userInput = inputElement.value;
+
+            // Display the text in a paragraph element
+            var displayElement = document.getElementById("displayText");
+            displayElement.textContent = "Entered Text: " + userInput;
+        }
+    </script>
+</body>
+</html>
